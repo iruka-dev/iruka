@@ -1,0 +1,105 @@
+* {
+  font-size: 5vw;
+  font-family: 'Open Sans', sans-serif;
+  background: #5F8EAC;
+}
+
+h1 {
+  font-size: 2em;
+  color: #FFF;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#refresh-btn {
+  display: block;
+  width: 2em;
+  height: 2em;
+  border: none;
+  margin: auto;
+  padding: 0 0 0 0;
+}
+
+#refresh-btn>img {
+  width: 2em;
+}
+
+form {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+	outline: none;
+  font-size: .6em
+
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;
+}
+
+
+input[type=search] {
+	background-image:url(../images/np_magnifying-glass_888719_000000.png);
+  background-repeat: no-repeat;
+  background-size: 2em;
+  background-color: #FFC986;
+	border: none;
+	padding: 9px 16px 9px 32px;
+	width: 10em;
+
+	-webkit-border-radius: .6em;
+	-moz-border-radius: .6em;
+	border-radius: .6em;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+	width: 80%;
+	padding-left: 32px;
+	color: #FFC986;
+  text-align: center;
+	background-color: #265C7F;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}

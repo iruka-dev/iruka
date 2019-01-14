@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Iruka</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
   <h1>Iruka</h1>
-  <button id="refresh-btn" type="button" name="button">Refresh</button>
-  <form class="search-form" action="#">
-    <input type="text" name="organization" value="makeschool">
-    <button type="submit" name="search"></button>
-  </form>
-  <div class="results">
+  <button id="refresh-btn" type="button" name="button">
+    <img src="images/np_refresh_888725_FFFFFF.png" alt="refresh">
+  </button>
+  <!-- Search Form by Adrian: https://codepen.io/912lab/pen/LsplC -->
+  <form id="demo-2">
+	<input type="search" placeholder="Search">
+</form>
 
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="build/main-bundled.js"></script>
 </body>
+
 </html>
