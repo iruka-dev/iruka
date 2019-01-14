@@ -1,0 +1,23 @@
+{
+  "name": "iruka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iruka-dev/iruka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iruka-dev/iruka/issues"
+  },
+  "homepage": "https://github.com/iruka-dev/iruka#readme",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.1"
+  }
+}
