@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "npm run build && webpack-dev-server --port=8000 --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,11 @@
   "homepage": "https://github.com/iruka-dev/iruka#readme",
   "dependencies": {
     "handlebars": "^4.0.12",
-    "handlebars-loader": "^1.7.1"
+    "handlebars-loader": "^1.7.1",
+    "webpack": "^4.28.4",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.1"
   }
 }
