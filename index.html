@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Iruka</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <h1>Iruka</h1>
-  <form class="search-form" action="# method="post">
-    <input type="text" name="organization" value="Search for Organization">
-    <button type="button" name="search"></button>
+  <button id="refresh-btn" type="button" name="button">Refresh</button>
+  <form class="search-form" action="#">
+    <input type="text" name="organization" value="makeschool">
+    <button type="submit" name="search"></button>
   </form>
   <div class="results">
 
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="js/main-bundled.js"></script>
+  <script src="build/main-bundled.js"></script>
 </body>
 </html>
