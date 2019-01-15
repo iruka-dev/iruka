@@ -15,15 +15,26 @@ h1 {
 /* REFRESH BUTTON */
 #refresh-btn {
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   border: none;
   margin: auto;
   padding: 0 0 0 0;
+  margin-bottom: 16px;
 }
 
 #refresh-btn>img {
-  width: 2em;
+  width: 1.5em;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  outline: none;
+  border-radius: 1.5em;
+
+}
+
+#refresh-btn:focus {
+  outline: none;
 }
 
 /* SEARCH BAR */

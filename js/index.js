@@ -2,6 +2,7 @@ const result = require('./result.hbs');
 
 const searchForm = document.querySelector('.search-form');
 const resultsContainer = document.querySelector('.results');
+const refreshButton = document.querySelector('#refresh-btn');
 
 
 searchForm.addEventListener('submit', (e) => {
@@ -41,11 +42,15 @@ window.addEventListener('load', (e) => {
   });
 });
 
-document.querySelector('#refresh-btn').addEventListener('click', (e) => {
+let deg = 0;
+refreshButton.addEventListener('click', (e) => {
   axios.post('https://iruka.herokuapp.com/api/users')
     .then((res) => {
       if (res.status === 200) {
         console.log('Refreshed data');
+        deg += 360;
+        const image = refreshButton.childNodes[1];
+        image.style.transform = `rotate(${deg}deg)`;
       } else {
         console.log(res);
       }
