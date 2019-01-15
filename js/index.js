@@ -13,13 +13,20 @@ searchForm.addEventListener('submit', (e) => {
 
   axios.get(`https://iruka.herokuapp.com/api/organizations/${formData.get('organization')}`)
     .then((response) => {
+      let dark = true;
       response.data.forEach((data) => {
+        let repo = data.link.substring(19);
+        repo = repo.substring(0, repo.lastIndexOf('/'));
+        repo = repo.substring(0, repo.lastIndexOf('/'));
         resultsContainer.innerHTML += result({
           title: data.title,
-          repo: data.link,
+          repo,
           language: data.language,
           labels: data.labels,
+          url: data.link,
+          dark,
         });
+        dark = !dark;
       });
     });
 });
@@ -28,8 +35,9 @@ window.addEventListener('load', (e) => {
   resultsContainer.innerHTML = result({
     title: 'Title',
     repo: 'Repo',
-    lanaguage: 'Language',
+    language: 'Language',
     labels: 'Labels',
+    dark: false,
   });
 });
 

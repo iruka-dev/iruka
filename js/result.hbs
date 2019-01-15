@@ -1,6 +1,10 @@
-<div class="result">
-  <div class="title">{{title}}</div>
-  <div class="repo">{{repo}}</div>
-  <div class="language">{{language}}</div>
-  <div class="labels">{{labels}}</div>
-</div>
+{{#if dark}}
+  <div class="result dark">
+{{else}}
+      <div class="result light">
+{{/if}}
+        <div class="title">{{title}}</div>
+        <div class="repo">{{repo}}</div>
+        <div class="language">{{language}}</div>
+        <div class="labels">{{labels}}</div>
+      </div>
