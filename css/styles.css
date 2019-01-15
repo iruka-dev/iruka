@@ -30,7 +30,6 @@ h1 {
   transition: all 1s;
   outline: none;
   border-radius: 1.5em;
-
 }
 
 #refresh-btn:focus {
@@ -39,6 +38,7 @@ h1 {
 
 /* SEARCH BAR */
 form {
+  position: relative;
   width: 100%;
   display: -webkit-flex;
   display: -ms-flex;
@@ -49,6 +49,7 @@ form {
   align-items: center;
   justify-content: center;
   height: 1.3em;
+  z-index: 100;
 }
 
 input {
@@ -119,12 +120,17 @@ input::-webkit-input-placeholder {
 }
 
 /* Results */
-
 .results {
   width: 80%;
   margin: auto;
-  margin-top: 36px;
+  margin-top: -1.3em;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  z-index: 0;
 }
+
 .result {
   display: grid;
   grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr;
@@ -135,7 +141,7 @@ input::-webkit-input-placeholder {
   align-items: center;
 }
 
-.result > div {
+.result>div {
   display: inline-block;
   font-size: .5em;
   text-align: center;
@@ -146,7 +152,7 @@ input::-webkit-input-placeholder {
   overflow: hidden;
 }
 
-.result > div:hover, .result > div:active, .result > div:focus {
+.result>div:hover, .result>div:active, .result>div:focus {
   overflow: auto;
 }
 
@@ -175,3 +181,35 @@ input::-webkit-input-placeholder {
 .dark {
   background: #265C7F;
 }
+
+/* .animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+} */

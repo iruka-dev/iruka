@@ -8,9 +8,35 @@ const refreshButton = document.querySelector('#refresh-btn');
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  console.log('Clicked');
+  resultsContainer.innerHTML = result({
+    title: 'Title',
+    repo: 'Repo',
+    language: 'Language',
+    labels: 'Labels',
+    dark: false,
+  });
 
   const formData = new FormData(searchForm);
+
+  resultsContainer.style.opacity = '100';
+  resultsContainer.style.marginTop = '16px';
+
+  const htmlItems = [];
+
+  function slowEach(array, interval, callback) {
+    if (!array.length) return;
+    let i = 0;
+    function next() {
+      if (callback(array[i], i) !== false) {
+        i += 1;
+        if (i < array.length) {
+          setTimeout(next, interval);
+        }
+      }
+    }
+    next();
+  }
+
 
   axios.get(`https://iruka.herokuapp.com/api/organizations/${formData.get('organization')}`)
     .then((response) => {
@@ -19,27 +45,20 @@ searchForm.addEventListener('submit', (e) => {
         let repo = data.link.substring(19);
         repo = repo.substring(0, repo.lastIndexOf('/'));
         repo = repo.substring(0, repo.lastIndexOf('/'));
-        resultsContainer.innerHTML += result({
+        htmlItems.push(result({
           title: data.title,
           repo,
           language: data.language,
           labels: data.labels,
           url: data.link,
           dark,
-        });
+        }));
         dark = !dark;
       });
+      slowEach(htmlItems, 150, (element) => {
+        resultsContainer.innerHTML += element;
+      });
     });
-});
-
-window.addEventListener('load', (e) => {
-  resultsContainer.innerHTML = result({
-    title: 'Title',
-    repo: 'Repo',
-    language: 'Language',
-    labels: 'Labels',
-    dark: false,
-  });
 });
 
 let deg = 0;
