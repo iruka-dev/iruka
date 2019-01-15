@@ -112,6 +112,7 @@ input::-webkit-input-placeholder {
 .results {
   width: 80%;
   margin: auto;
+  margin-top: 36px;
 }
 .result {
   display: grid;
