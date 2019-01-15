@@ -122,7 +122,7 @@ input::-webkit-input-placeholder {
   height: 1.3em;
   margin: 0;
   align-items: center;
-  fz
+
 }
 
 .result > div {
@@ -131,7 +131,13 @@ input::-webkit-input-placeholder {
   text-align: center;
   margin: 0;
   vertical-align: center;
+  white-space: nowrap;
   background: none;
+  overflow: hidden;
+}
+
+.result > div:hover, .result > div:active, .result > div:focus {
+  overflow: auto;
 }
 
 .title {
