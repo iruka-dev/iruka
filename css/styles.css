@@ -122,7 +122,6 @@ input::-webkit-input-placeholder {
   height: 1.3em;
   margin: 0;
   align-items: center;
-
 }
 
 .result > div {
@@ -158,6 +157,8 @@ input::-webkit-input-placeholder {
 
 .light {
   background: #3E7192;
+  border-top: 2px solid #5F8EAC;
+  border-bottom: 2px solid #5F8EAC;
 }
 
 .dark {
