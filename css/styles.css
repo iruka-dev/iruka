@@ -42,13 +42,13 @@ form {
 
 input {
   outline: none;
-  font-size: .6em
 }
 
 input[type=search] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   font-family: inherit;
+  text-align: center;
 }
 
 input::-webkit-search-decoration,
@@ -59,11 +59,9 @@ input::-webkit-search-cancel-button {
 input[type=search] {
   background-image: url(../images/np_magnifying-glass_888719_000000.png);
   background-repeat: no-repeat;
-  background-size: 2em;
+  background-size: 1.3em;
   background-color: #FFC986;
   border: none;
-  padding: 9px 16px 9px 32px;
-  width: 10em;
   -webkit-border-radius: .6em;
   -moz-border-radius: .6em;
   border-radius: .6em;
@@ -81,8 +79,9 @@ input::-webkit-input-placeholder {
 }
 
 #demo-2 input[type=search] {
-  width: 15px;
-  padding-left: 10px;
+  width: 1.3em;
+  height: 1.3em;
+  /* padding-left: 10px; */
   color: transparent;
   cursor: pointer;
 }
