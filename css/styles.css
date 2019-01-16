@@ -141,7 +141,7 @@ input::-webkit-input-placeholder {
   align-items: center;
 }
 
-.result>div {
+.result>* {
   display: inline-block;
   font-size: .5em;
   text-align: center;
@@ -152,7 +152,12 @@ input::-webkit-input-placeholder {
   overflow: hidden;
 }
 
-.result>div:hover, .result>div:active, .result>div:focus {
+.result > a {
+  text-decoration: none;
+  color: black;
+}
+
+.result>*:hover, .result>*:active, .result>*:focus {
   overflow: auto;
 }
 
