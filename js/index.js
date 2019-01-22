@@ -17,6 +17,10 @@ searchForm.addEventListener('submit', (e) => {
   });
 
   const formData = new FormData(searchForm);
+  let orgName = formData.get('organization').toLowerCase().replace(/\s/g, '');
+  if (orgName.charAt(0) === '@') {
+    orgName = orgName.substr(1);
+  }
 
   resultsContainer.style.opacity = '100';
   resultsContainer.style.marginTop = '16px';
@@ -26,6 +30,7 @@ searchForm.addEventListener('submit', (e) => {
   function slowEach(array, interval, callback) {
     if (!array.length) return;
     let i = 0;
+
     function next() {
       if (callback(array[i], i) !== false) {
         i += 1;
@@ -38,7 +43,7 @@ searchForm.addEventListener('submit', (e) => {
   }
 
 
-  axios.get(`https://iruka.herokuapp.com/api/organizations/${formData.get('organization')}`)
+  axios.get(`https://iruka.herokuapp.com/api/organizations/${orgName}`)
     .then((response) => {
       let dark = true;
       response.data.forEach((data) => {
