@@ -8,6 +8,8 @@ Iruka is a platform for discovering and listing issues within communities.
 
 ### Searching
 
+http://iruka.techseve.com
+
 As simple as searching for an organization.
 
 Searches are case insensitive and you do not need to include an `@` at the beginning of the name.
