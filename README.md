@@ -2,7 +2,7 @@
 
 ## What is Iruka?
 
-Iruka is a platform for discovering and listing issues within communities.
+Iruka is a platform for discovering and listing GitHub issues within communities.
 
 ## How to use Iruka
 
