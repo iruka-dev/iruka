@@ -4,6 +4,27 @@
   background: #5F8EAC;
 }
 
+p.header{
+  font-size: 0;
+}
+
+.header > span {
+  width: 50%;
+  display: inline-block;
+}
+
+span.align-right {
+  text-align: right;
+}
+.info {
+  font-size: .6em;
+  margin-top: 0;
+  margin-right: 16px;
+  color: #FFF;
+  text-align: right;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 2em;
   color: #FFF;
@@ -150,11 +171,12 @@ input::-webkit-input-placeholder {
   white-space: nowrap;
   background: none;
   overflow: hidden;
+  color: rgb(188, 222, 228)
 }
 
 .result > a {
   text-decoration: none;
-  color: black;
+  color: rgb(188, 222, 228);
 }
 
 .result>*:hover, .result>*:active, .result>*:focus {
